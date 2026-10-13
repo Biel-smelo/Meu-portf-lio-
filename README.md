@@ -1,1 +1,407 @@
-# Meu-portf-lio-
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel H. S Melo | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-dark-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight">Gabriel<span class="text-brand-500">Melo</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#sobre" class="text-slate-300 hover:text-brand-400 transition-colors duration-200 text-sm font-medium">Sobre Mim</a>
+                    <a href="#experiencia" class="text-slate-300 hover:text-brand-400 transition-colors duration-200 text-sm font-medium">Experiência</a>
+                    <a href="#educacao" class="text-slate-300 hover:text-brand-400 transition-colors duration-200 text-sm font-medium">Educação</a>
+                    <a href="#habilidades" class="text-slate-300 hover:text-brand-400 transition-colors duration-200 text-sm font-medium">Habilidades</a>
+                    <a href="#contato" class="text-slate-300 hover:text-brand-400 transition-colors duration-200 text-sm font-medium">Contato</a>
+                    <div class="flex items-center space-x-4 pl-4 border-l border-dark-700">
+                        <a href="https://linkedin.com/in/gabriel-melo-83595b213" target="_blank" class="text-slate-400 hover:text-brand-500 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://github.com/Biel-smelo" target="_blank" class="text-slate-400 hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                        <a href="https://w.app/q3bmou" target="_blank" class="text-slate-400 hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-950 border-b border-dark-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-800">Sobre Mim</a>
+                <a href="#experiencia" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-800">Experiência</a>
+                <a href="#educacao" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-800">Educação</a>
+                <a href="#habilidades" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-800">Habilidades</a>
+                <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-800">Contato</a>
+                <div class="flex space-x-6 px-3 py-4 mt-2 border-t border-dark-800">
+                    <a href="https://linkedin.com/in/gabriel-melo-83595b213" target="_blank" class="text-slate-400 hover:text-brand-500"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                    <a href="https://github.com/Biel-smelo" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-2xl"></i></a>
+                    <a href="https://w.app/q3bmou" target="_blank" class="text-slate-400 hover:text-green-500"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 relative overflow-hidden">
+        <!-- Abstract Tech Background Elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 text-center flex flex-col items-center">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-dark-800 border border-dark-800 text-brand-400 text-sm font-semibold mb-6 shadow-sm">
+                <i class="fa-solid fa-rocket mr-2"></i> Em Transição para Tecnologia da Informação
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
+                Olá, eu sou o <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-600">Gabriel H. de Souza Melo</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Profissional com sólida base em Administração e Logística, aplicando forte capacidade analítica e de resolução de problemas em uma jornada apaixonada para o setor de TI e Inteligência Artificial.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" class="px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-brand-600 hover:bg-brand-500 transition-colors shadow-lg shadow-brand-500/30">
+                    Vamos Conversar
+                </a>
+                <a href="#sobre" class="px-8 py-3.5 border border-dark-800 text-base font-medium rounded-lg text-slate-300 bg-dark-800 hover:bg-slate-800 transition-colors">
+                    Conheça meu Trabalho
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-dark-950 border-y border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Sobre Mim</h2>
+                    <div class="w-20 h-1 bg-brand-500 rounded mb-8"></div>
+                    <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+                        <p>
+                            Sou um profissional dinâmico com uma sólida trajetória em <strong>Logística e Rotinas Administrativas</strong>. Ao longo da minha carreira, desenvolvi uma forte habilidade de organização, gestão de processos e resolução rápida de problemas críticos.
+                        </p>
+                        <p>
+                            Atualmente, estou em um processo dedicado de <strong>transição de carreira para a Tecnologia da Informação (TI)</strong>. Meu fascínio por tecnologia, automação e inovação me levou a mergulhar em estudos sobre Inteligência Artificial, desenvolvimento e arquitetura de sistemas.
+                        </p>
+                        <p>
+                            Acredito que minha experiência prévia me confere um olhar único: entendo a tecnologia não apenas como código, mas como uma ferramenta poderosa para otimizar negócios, melhorar o fluxo logístico e trazer eficiência para o setor administrativo.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-blue-600 rounded-2xl blur opacity-25"></div>
+                    <div class="relative bg-dark-900 border border-dark-800 rounded-2xl p-8 flex flex-col items-center justify-center h-full min-h-[300px]">
+                        <i class="fa-solid fa-code-branch text-6xl text-brand-500 mb-6"></i>
+                        <h3 class="text-xl font-bold text-white text-center mb-4">Filosofia Profissional</h3>
+                        <p class="text-center text-slate-400">"Unindo a disciplina da administração com a inovação da tecnologia para criar soluções eficientes."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-2">Experiência Profissional</h2>
+            <div class="w-20 h-1 bg-brand-500 rounded mx-auto mb-16"></div>
+
+            <div class="relative border-l border-dark-800 ml-3 md:ml-6 space-y-12">
+                
+                <!-- Experience Item 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-brand-500 rounded-full -left-[9px] top-1.5 border-4 border-dark-900"></div>
+                    <div class="md:flex md:items-start md:justify-between w-full">
+                        <div class="md:w-1/4 hidden md:flex flex-col items-end pr-8 relative">
+                            <div class="absolute w-4 h-4 bg-brand-500 rounded-full -right-[8px] top-1.5 border-4 border-dark-900"></div>
+                            <span class="text-brand-400 font-semibold">Atual</span>
+                        </div>
+                        <div class="md:w-3/4 md:pl-8">
+                            <div class="bg-dark-800 p-6 rounded-xl border border-dark-800 hover:border-dark-700 transition-colors">
+                                <h3 class="text-xl font-bold text-white">Auxiliar Administrativo</h3>
+                                <h4 class="text-brand-400 font-medium mb-4">GSL Metalúrgica S.A.</h4>
+                                <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                                    <li>Controle de fluxo de materiais e logística interna.</li>
+                                    <li>Gestão de rotinas administrativas e documentação.</li>
+                                    <li>Otimização de processos para garantir eficiência na linha de despacho.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1.5 border-4 border-dark-900"></div>
+                    <div class="md:flex md:items-start md:justify-between w-full">
+                        <div class="md:w-1/4 hidden md:flex flex-col items-end pr-8 relative">
+                            <div class="absolute w-4 h-4 bg-slate-600 rounded-full -right-[8px] top-1.5 border-4 border-dark-900"></div>
+                            <span class="text-slate-500 font-semibold">Anterior</span>
+                        </div>
+                        <div class="md:w-3/4 md:pl-8">
+                            <div class="bg-dark-800 p-6 rounded-xl border border-dark-800 hover:border-dark-700 transition-colors">
+                                <h3 class="text-xl font-bold text-white">Designer Gráfico</h3>
+                                <h4 class="text-brand-400 font-medium mb-4">Trabalho Freelance / Projetos</h4>
+                                <ul class="space-y-2 text-slate-300 list-disc list-inside">
+                                    <li>Criação visual focada em comunicação clara e estética moderna.</li>
+                                    <li>Amplo uso do pacote Adobe Creative Suite (Photoshop, Illustrator, etc).</li>
+                                    <li>Tradução de requisitos de clientes em peças gráficas eficientes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="educacao" class="py-20 bg-dark-950 border-y border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-2">Educação e Cursos</h2>
+            <div class="w-20 h-1 bg-brand-500 rounded mx-auto mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <!-- Education Card -->
+                <div class="bg-dark-900 border border-dark-800 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-dark-800 rounded-lg flex items-center justify-center mb-4 text-brand-400">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Centro Universitário UNA</h3>
+                    <p class="text-slate-400 text-sm mb-4">Ensino Superior</p>
+                    <p class="text-slate-300">Base acadêmica sólida, focada no desenvolvimento profissional e técnico.</p>
+                </div>
+
+                <!-- Course Card 1 -->
+                <div class="bg-dark-900 border border-dark-800 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-dark-800 rounded-lg flex items-center justify-center mb-4 text-brand-400">
+                        <i class="fa-solid fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">IA Generativa</h3>
+                    <p class="text-slate-400 text-sm mb-4">Oracle Cloud Infrastructure (OCI)</p>
+                    <p class="text-slate-300">Estudo aprofundado sobre tecnologias de Inteligência Artificial Generativa e sua aplicação em ambientes corporativos e cloud.</p>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-dark-900 border border-dark-800 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-dark-800 rounded-lg flex items-center justify-center mb-4 text-brand-400">
+                        <i class="fa-solid fa-award text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Aspire Leaders Program</h3>
+                    <p class="text-slate-400 text-sm mb-4">Programa de Liderança</p>
+                    <p class="text-slate-300">Desenvolvimento de habilidades de liderança, comunicação e gestão de carreira com perspectiva global.</p>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-dark-900 border border-dark-800 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-dark-800 rounded-lg flex items-center justify-center mb-4 text-brand-400">
+                        <i class="fa-solid fa-network-wired text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Tech Week</h3>
+                    <p class="text-slate-400 text-sm mb-4">Participação Ativa</p>
+                    <p class="text-slate-300">Imersão nas tendências atuais de tecnologia, networking com profissionais da área e expansão de conhecimento técnico.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-2">Habilidades Técnicas & Soft Skills</h2>
+            <div class="w-20 h-1 bg-brand-500 rounded mx-auto mb-16"></div>
+
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <!-- Skill Badge -->
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-brands fa-html5 text-orange-500"></i>
+                    <span class="text-slate-200 font-medium">HTML5</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                    <span class="text-slate-200 font-medium">CSS3</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-brands fa-js text-yellow-400"></i>
+                    <span class="text-slate-200 font-medium">JavaScript</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-laptop-code text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Tecnologia da Informação (TI)</span>
+                </div>
+                
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-boxes-stacked text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Logística & Operações</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-brain text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Inteligência Artificial Generativa</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-pen-nib text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Adobe Creative Suite</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-chart-line text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Administração & Processos</span>
+                </div>
+
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-puzzle-piece text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Resolução de Problemas</span>
+                </div>
+                
+                <div class="flex items-center gap-2 bg-dark-800 border border-dark-700 px-6 py-3 rounded-full hover:bg-dark-700 transition-colors cursor-default">
+                    <i class="fa-solid fa-palette text-brand-400"></i>
+                    <span class="text-slate-200 font-medium">Design Gráfico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-dark-950 border-t border-dark-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-2">Vamos Trabalhar Juntos?</h2>
+            <div class="w-20 h-1 bg-brand-500 rounded mx-auto mb-10"></div>
+            
+            <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+                Estou aberto a novas oportunidades na área de TI, onde eu possa aplicar minha bagagem administrativa e minha paixão por tecnologia. Sinta-se à vontade para me contatar.
+            </p>
+
+            <div class="flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/gabriel-melo-83595b213" target="_blank" class="w-14 h-14 bg-dark-800 border border-dark-700 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in text-2xl"></i>
+                </a>
+                <a href="https://github.com/Biel-smelo" target="_blank" class="w-14 h-14 bg-dark-800 border border-dark-700 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition-all duration-300">
+                    <i class="fa-brands fa-github text-2xl"></i>
+                </a>
+                <a href="https://w.app/q3bmou" target="_blank" class="w-14 h-14 bg-dark-800 border border-dark-700 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-green-600 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </a>
+            </div>
+            
+            <div class="mt-12 p-6 bg-dark-900 border border-dark-800 rounded-xl inline-block text-left max-w-md w-full">
+                <div class="flex items-center text-slate-300 mb-4">
+                    <i class="fa-solid fa-location-dot text-brand-400 mr-4 text-xl"></i>
+                    <span>Minas Gerais - Brasil</span>
+                </div>
+                <div class="flex items-center text-slate-300">
+                    <i class="fa-solid fa-envelope text-brand-400 mr-4 text-xl"></i>
+                    <span>gh54824131@gmail.com</span> <!-- Substitua pelo seu email -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 py-8 border-t border-dark-800 text-center">
+        <p class="text-slate-500 text-sm">
+            &copy; <script>document.write(new Date().getFullYear())</script> Gabriel Henrique de Souza Melo. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <!-- Scripts for interaction -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Add background blur to nav on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
