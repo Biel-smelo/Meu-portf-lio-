@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-dark-800 transition-all duration-300">
-     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold text-white tracking-tight">Gabriel<span class="text-brand-500">Melo</span></a>
